@@ -1,6 +1,5 @@
 
 
-
 var tableInputBinding = new Shiny.InputBinding();
   $.extend(tableInputBinding, {
     find: function(scope) {
@@ -10,7 +9,7 @@ var tableInputBinding = new Shiny.InputBinding();
 
       var data_encoded = $(el).handsontable('getData');
       
-      return data_encoded;
+      return JSON.stringify(data_encoded);
     },
     setValue: function(el) {
     },
